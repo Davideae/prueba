@@ -18,7 +18,7 @@ public class Main {
 		float media=1;
 		String nombre, nombreMenor=""; 
 		Scanner sc = new Scanner(System.in);
-		boolean continuar=true;
+		boolean continuar=true; 
 		
 		anioActual = Calendar.getInstance().get(Calendar.YEAR);
 		System.out.println(anioActual);
