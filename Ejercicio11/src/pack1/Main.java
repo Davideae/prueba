@@ -18,12 +18,37 @@ public class Main {
 		float media=1;
 		String nombre, nombreMenor=""; 
 		Scanner sc = new Scanner(System.in);
-		Calendar calendario = Calendar.getInstance();
-		boolean continuar=true;
+		boolean continuar=true; 
 		
 		anioActual = Calendar.getInstance().get(Calendar.YEAR);
-		//System.out.println(anioActual);
+		System.out.println(anioActual);
 		
+		System.out.println("Introduzca nombre: ");
+		nombre = sc.nextLine();
+		
+		while(nombre.equals("fin")==false) 
+		{
+			System.out.println("Introduzca año de nacimiento");
+			anioNacimiento = Integer.parseInt(sc.nextLine());
+			
+			cantidadAlumnos++;
+		
+			edad = anioActual - anioNacimiento;
+			
+			suma += edad;
+		
+			media = (float)suma/(float)cantidadAlumnos;
+			
+			if(edad<menor) {
+				menor = edad;
+				nombreMenor = nombre;
+			}
+			
+			System.out.println("Introduzca nombre: ");
+			nombre = sc.nextLine();
+		}
+		
+		/*
 		do 
 		{
 			System.out.println("Introduzca nombre, 'fin' para salir: ");
@@ -51,7 +76,8 @@ public class Main {
 			}
 			
 		}while(continuar);
-
+		 */
+		sc.close();
 		if(cantidadAlumnos>0) {
 		System.out.println("Edad media: "+media);
 		System.out.println("Nombre del alumno menor: "+nombreMenor);
