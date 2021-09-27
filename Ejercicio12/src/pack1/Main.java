@@ -11,7 +11,7 @@ public class Main {
 		
 		for(n=2;n<101;n++) 
 		{
-			primo = true;
+			primo = true; // siempre volver a inicializar las variables si puedes ser modificadas dentro del bucle
 			for (c=2; c<n; c++) 
 			{ 
 				if(n%c == 0) 
